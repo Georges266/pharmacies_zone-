@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pharmacies_zone/Controllers/Slide3Controller.dart';
 import 'package:pharmacies_zone/Controllers/Slide4Controller.dart';
 import 'package:pharmacies_zone/Routes/AppRoute.dart';
 
@@ -17,7 +16,7 @@ class Slide4 extends GetView<Slide4Controller> {
       body: SingleChildScrollView(
         child: Column(
 
-          mainAxisAlignment: MainAxisAlignment.center,
+
           children: <Widget>[
             Stack(
               children: [
@@ -25,7 +24,7 @@ class Slide4 extends GetView<Slide4Controller> {
                   margin: EdgeInsets.only(left:15,right: 15 ),
                   child:
                   Image.asset(
-                    'assets/images/img4.PNG',
+                    'assets/images/img3.jpeg',
 
                   ),
                 ),
@@ -64,12 +63,14 @@ class Slide4 extends GetView<Slide4Controller> {
                         )
 
                     ),
-                    Text("Register a New Account",
+                    Text("Please login your account",
                       style: TextStyle(
                         color: Colors.grey,
                       ),
                     ),
+
                     SizedBox(height: 10,),
+
                     Text("Name",
                       style: TextStyle(
                         fontSize: 20,
@@ -78,16 +79,18 @@ class Slide4 extends GetView<Slide4Controller> {
                     TextField(
                       decoration: InputDecoration(
 
-                        hintText: "Enter your full name",
+                        hintText: "Enter your Name",
                         hintStyle: TextStyle(color: Colors.grey),
                         contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                         border:InputBorder.none,
                         filled: true,
                         fillColor: Colors.grey[200],
-                        prefixIcon: Icon(Icons.person,color: Colors.grey,),
+                        prefixIcon: Icon(Icons.person_2_outlined,color: Colors.grey,),
                       ),
                     ),
+
                     SizedBox(height: 10,),
+
                     Text("Email",
                       style: TextStyle(
                         fontSize: 20,
@@ -133,7 +136,7 @@ class Slide4 extends GetView<Slide4Controller> {
                       ),
                     )),
 
-                    SizedBox(height: 10,),
+                    SizedBox(height: 15,),
                     Align(
                       alignment: Alignment.centerRight,
                       child: Text("Forgot password?",
@@ -143,20 +146,20 @@ class Slide4 extends GetView<Slide4Controller> {
 
                       ),
                     ),
-                    SizedBox(height: 15,),
+                    SizedBox(height: 20,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
 
                       children: [
                         ElevatedButton(
-                          onPressed:() { Get.toNamed(AppRoute.slide5); },
+                          onPressed:() {Get.toNamed(AppRoute.slide5);},
 
                           style: ButtonStyle(
                             minimumSize: MaterialStateProperty.all(Size(300, 50)),
                             backgroundColor: MaterialStateProperty.all(Colors.blue),
                           ),
                           child: Text("Register",
-                              style:TextStyle(color: Colors.white,fontSize: 15,)
+                              style:TextStyle(color: Colors.white)
                           ),
 
                         ),
@@ -165,20 +168,25 @@ class Slide4 extends GetView<Slide4Controller> {
                     ),
                     SizedBox(height: 30,),
                     Row(
-
                       children: [
                         Text("You have an account?"),
-                        SizedBox(width: 10,),
-                        InkWell( onTap: (){Get.toNamed(AppRoute.slide3);}, ),
-                        Text("Login",
-                          style: TextStyle(
-                            color: Colors.blue,
-
+                        SizedBox(width: 10),
+                        InkWell(
+                          onTap: () {
+                            Get.toNamed(AppRoute.slide3);
+                            // Your navigation logic here
+                            print("Register tapped");
+                          },
+                          child: Text(
+                            "Login",
+                            style: TextStyle(
+                              color: Colors.blue,
+                            ),
                           ),
                         ),
-
                       ],
                     ),
+
                     SizedBox(height: 150,),
                   ]
               ),

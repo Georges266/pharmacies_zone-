@@ -3,12 +3,8 @@ import 'package:get/get.dart';
 import 'package:pharmacies_zone/Routes/AppPage.dart';
 import 'package:pharmacies_zone/Routes/AppRoute.dart';
 
-import 'package:pharmacies_zone/Views/Slide5.dart';
-
 void main() {
   runApp(const MyApp());
-  // Uncomment the line below if you prefer to disable CanvasKit and use the default HTML renderer.
-  // flutterWebRenderer: Surface
 }
 
 class MyApp extends StatelessWidget {
@@ -22,11 +18,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute:AppRoute.slide5,
+      initialRoute: AppRoute.slide1
+      , // This handles navigation
       getPages: AppPage.pages,
-      home: Slide5(),
     );
   }
 }
-
-

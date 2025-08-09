@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 
 
-class AdminNavController  extends GetxController {
+class AdminNavController3  extends GetxController {
 
   var selectedIndex = 2.obs;
 
